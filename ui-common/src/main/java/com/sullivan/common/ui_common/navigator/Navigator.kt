@@ -8,4 +8,5 @@ interface LoginNavigator {
 
 interface ReservationNavigator {
     fun openReservationHome(context: Context)
+    fun openRealTimeReservationHome(context: Context)
 }
