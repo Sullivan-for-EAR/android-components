@@ -32,11 +32,11 @@ inline fun <T : ViewBinding> AppCompatActivity.viewBinding(
 }
 
 // 액티비티 전환 후 종료하는 함수
-inline fun <reified T : Activity> Context.launchActivity() {
+inline fun <reified T : Activity> Activity.launchActivity() {
     val intent = Intent(this, T::class.java)
     intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK
     startActivity(intent)
-    (this as Activity).overridePendingTransition(0, 0)
+    overridePendingTransition(0, 0)
     finish()
 }
 

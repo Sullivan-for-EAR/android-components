@@ -29,4 +29,5 @@
     <color name="user_phone_text_color">#787878</color>
     <color name="prev_reservation_delete_btn_color">#FF3B30</color>
     <color name="prev_reservation_guide_msg_color">#979797</color>
+    <color name="btn_emergency_bg_color">#FF453A</color>
 </resources>
