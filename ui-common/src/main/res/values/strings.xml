@@ -117,4 +117,10 @@
     <string name="fragment_my_page_dialog_logout_body">정말 로그아웃 하시나요?</string>
     <string name="fragment_my_page_dialog_logout_positive_btn_title">확인</string>
     <string name="fragment_my_page_dialog_logout_negative_btn_title">취소</string>
+
+<!--    Signear Admin App -->
+<!--    Bottom Navigation-->
+    <string name="bottom_nav_title_home">실시간 예약</string>
+    <string name="bottom_nav_title_management">예약 관리</string>
+    <string name="bottom_nav_title_profile">예약 관리</string>
 </resources>

@@ -124,9 +124,10 @@
 
     <style name="CardViewButtonStyle" parent="Widget.MaterialComponents.CardView">
 <!--        <item name="android:layout_gravity">center</item>-->
-        <item name="cardCornerRadius">8dp</item>
-        <item name="cardElevation">2dp</item>
-        <item name="useCompatPadding">true</item>
+        <item name="cardCornerRadius">7dp</item>
+        <item name="cardElevation">5dp</item>
+<!--        <item name="useCompatPadding">true</item>-->
+        <item name="cardUseCompatPadding">true</item>
         <item name="android:clickable">true</item>
     </style>
 </resources>
