@@ -19,10 +19,12 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewbinding.ViewBinding
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 import com.sullivan.common.ui_common.R
 
 import kotlin.properties.ReadWriteProperty
+import kotlin.reflect.KFunction0
 import kotlin.reflect.KProperty
 
 inline fun <T : ViewBinding> AppCompatActivity.viewBinding(
@@ -145,4 +147,27 @@ fun Fragment.openDialog(fragment: BottomSheetDialogFragment, tag: String) {
     } catch (e: Exception) {
         // Exception is ignored.
     }
+}
+
+fun Activity.setupDialogWithAction(
+    title: String,
+    positiveBtn: String,
+    negativeBtn: String,
+    behavior: KFunction0<Unit>,
+    message: String = ""
+) {
+
+    MaterialAlertDialogBuilder(
+        this, R.style.ThemeOverlay_MaterialComponents_MaterialAlertDialog
+    )
+        .setTitle(title)
+        .setMessage(message)
+        .setPositiveButton(positiveBtn) { _, _ ->
+            behavior()
+        }
+        .setNegativeButton(negativeBtn) { dialog, _ ->
+            dialog.dismiss()
+        }
+        .setCancelable(false)
+        .show()
 }
