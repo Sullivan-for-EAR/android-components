@@ -122,5 +122,11 @@
 <!--    Bottom Navigation-->
     <string name="bottom_nav_title_home">실시간 예약</string>
     <string name="bottom_nav_title_management">예약 관리</string>
-    <string name="bottom_nav_title_profile">예약 관리</string>
+    <string name="bottom_nav_title_profile">프로필</string>
+
+    <string name="fragment_reservation_info_title_for_translator">상세 정보</string>
+    <string name="fragment_reservation_info_tv_place_title">장소</string>
+    <string name="fragment_reservation_info_btn_contact_title">연락하기</string>
+    <string name="fragment_reservation_info_btn_reject_title">거절</string>
+    <string name="fragment_reservation_info_btn_approve_title">승인</string>
 </resources>
