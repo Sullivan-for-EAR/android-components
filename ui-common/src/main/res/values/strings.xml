@@ -128,5 +128,5 @@
     <string name="fragment_reservation_info_tv_place_title">장소</string>
     <string name="fragment_reservation_info_btn_contact_title">연락하기</string>
     <string name="fragment_reservation_info_btn_reject_title">거절</string>
-    <string name="fragment_reservation_info_btn_approve_title">승인</string>
+    <string name="fragment_reservation_info_btn_approve_title">예약 승인</string>
 </resources>

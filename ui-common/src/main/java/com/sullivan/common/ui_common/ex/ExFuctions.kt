@@ -150,7 +150,7 @@ fun Fragment.openDialog(fragment: BottomSheetDialogFragment, tag: String) {
     }
 }
 
-fun FragmentManager.openDialog(fragment: BottomSheetDialogFragment, tag: String) {
+fun FragmentManager.openDialog(fragment: DialogFragment, tag: String) {
     val ft = this.beginTransaction()
     val prev: Fragment? = this.findFragmentByTag(tag)
     if (prev != null) {

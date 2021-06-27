@@ -37,4 +37,6 @@
 
 <!--    dialog reservation decline-->
     <color name="dialog_reservation_decline_background">#F2F2F2</color>
+    <color name="btn_decline_text_color">#FF0000</color>
+    <color name="btn_cancel_text_color">#007AFF</color>
 </resources>
