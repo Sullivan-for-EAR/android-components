@@ -34,4 +34,6 @@
 
 <!--    dialog contact customer-->
     <color name="dialog_contact_customer_text_color">#007AFF</color>
+
+<!--    dialog reservation decline-->
 </resources>

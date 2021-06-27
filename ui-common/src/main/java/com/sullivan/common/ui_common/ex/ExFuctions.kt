@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
 import androidx.recyclerview.widget.RecyclerView
@@ -135,6 +136,23 @@ fun Context.getResourceId(title: String) = resources.getIdentifier(title, "drawa
 fun Fragment.openDialog(fragment: BottomSheetDialogFragment, tag: String) {
     val ft = parentFragmentManager.beginTransaction()
     val prev: Fragment? = parentFragmentManager.findFragmentByTag(tag)
+    if (prev != null) {
+        ft.remove(prev).commit()
+    }
+//    ft.addToBackStack(null)
+
+    try {
+        if (!fragment.isAdded) {
+            fragment.show(ft, tag)
+        }
+    } catch (e: Exception) {
+        // Exception is ignored.
+    }
+}
+
+fun FragmentManager.openDialog(fragment: BottomSheetDialogFragment, tag: String) {
+    val ft = this.beginTransaction()
+    val prev: Fragment? = this.findFragmentByTag(tag)
     if (prev != null) {
         ft.remove(prev).commit()
     }
