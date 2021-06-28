@@ -43,6 +43,15 @@ inline fun <reified T : Activity> Activity.launchActivity() {
     finish()
 }
 
+
+inline fun <reified T : Activity> Activity.reorderToActivity() {
+    val intent = Intent(this, T::class.java)
+    intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
+    startActivity(intent)
+    overridePendingTransition(0, 0)
+    finish()
+}
+
 fun <T> Fragment.viewLifecycle(): ReadWriteProperty<Fragment, T> =
     object : ReadWriteProperty<Fragment, T>, DefaultLifecycleObserver {
 
