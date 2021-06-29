@@ -35,6 +35,11 @@
         <item>로그아웃</item>
     </string-array>
 
+    <string-array name="profile_items">
+        <item>의견 남기기</item>
+        <item>로그아웃</item>
+    </string-array>
+
     <!--    Login -->
     <string name="login_title1">쉽고 빠르게</string>
     <string name="login_title2">수어통역을 예약하세요!</string>
