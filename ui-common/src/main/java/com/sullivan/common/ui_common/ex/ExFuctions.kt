@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
 import androidx.recyclerview.widget.RecyclerView
@@ -37,6 +38,15 @@ inline fun <T : ViewBinding> AppCompatActivity.viewBinding(
 inline fun <reified T : Activity> Activity.launchActivity() {
     val intent = Intent(this, T::class.java)
     intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK
+    startActivity(intent)
+    overridePendingTransition(0, 0)
+    finish()
+}
+
+
+inline fun <reified T : Activity> Activity.reorderToActivity() {
+    val intent = Intent(this, T::class.java)
+    intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
     startActivity(intent)
     overridePendingTransition(0, 0)
     finish()
@@ -135,6 +145,23 @@ fun Context.getResourceId(title: String) = resources.getIdentifier(title, "drawa
 fun Fragment.openDialog(fragment: BottomSheetDialogFragment, tag: String) {
     val ft = parentFragmentManager.beginTransaction()
     val prev: Fragment? = parentFragmentManager.findFragmentByTag(tag)
+    if (prev != null) {
+        ft.remove(prev).commit()
+    }
+//    ft.addToBackStack(null)
+
+    try {
+        if (!fragment.isAdded) {
+            fragment.show(ft, tag)
+        }
+    } catch (e: Exception) {
+        // Exception is ignored.
+    }
+}
+
+fun FragmentManager.openDialog(fragment: DialogFragment, tag: String) {
+    val ft = this.beginTransaction()
+    val prev: Fragment? = this.findFragmentByTag(tag)
     if (prev != null) {
         ft.remove(prev).commit()
     }

@@ -31,4 +31,12 @@
     <color name="prev_reservation_delete_btn_color">#FF3B30</color>
     <color name="prev_reservation_guide_msg_color">#979797</color>
     <color name="btn_emergency_bg_color">#FF453A</color>
+
+<!--    dialog contact customer-->
+    <color name="dialog_contact_customer_text_color">#007AFF</color>
+
+<!--    dialog reservation decline-->
+    <color name="dialog_reservation_decline_background">#F2F2F2</color>
+    <color name="btn_decline_text_color">#FF0000</color>
+    <color name="btn_cancel_text_color">#007AFF</color>
 </resources>
