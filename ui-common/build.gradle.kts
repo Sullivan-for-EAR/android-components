@@ -1,6 +1,8 @@
 plugins {
     id("com.android.library")
     kotlin("android")
+    kotlin("kapt")
+    id("dagger.hilt.android.plugin")
 }
 
 listOf(
@@ -30,6 +32,9 @@ dependencies {
     implementation(Dep.AndroidX.Navigation.uiKtx)
 
     implementation(Dep.timber)
+
+    implementation(Dep.Dagger.Hilt.android)
+    kapt(Dep.Dagger.Hilt.compiler)
 
     coreLibraryDesugaring (Dep.Tool.desugarJdk)
 }
