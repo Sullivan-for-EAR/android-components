@@ -32,6 +32,7 @@ dependencies {
     implementation(Dep.AndroidX.Navigation.uiKtx)
 
     implementation(Dep.timber)
+    implementation(Dep.Retrofit.gson)
 
     implementation(Dep.Dagger.Hilt.android)
     kapt(Dep.Dagger.Hilt.compiler)
