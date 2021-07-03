@@ -29,17 +29,18 @@ class SharedPreferenceManager @Inject constructor(
         }
     }
 
-//    fun getUserPHONE() = pref.getString(USER_PHONE, "")
-//
-//    fun setUserPHONE(userPHONE: String) {
-//
-//        pref.edit {
-//            putString(USER_PHONE, userPHONE)
-//        }
-//    }
+    fun getEmergencyReservationID() = pref.getInt(EMERGENCY_RESERVATION_ID, 0)
+
+    fun setEmergencyReservationID(id: Int) {
+
+        pref.edit {
+            putInt(EMERGENCY_RESERVATION_ID, id)
+        }
+    }
 
     companion object {
         const val TOKEN = "token"
         const val USER_ID = "user_id"
+        const val EMERGENCY_RESERVATION_ID = "emergency_reservation_id"
     }
 }
