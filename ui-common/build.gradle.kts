@@ -37,5 +37,10 @@ dependencies {
     implementation(Dep.Dagger.Hilt.android)
     kapt(Dep.Dagger.Hilt.compiler)
 
+    implementation(Dep.OkHttp.core)
+    implementation ("com.squareup.okhttp3:okhttp:4.9.1")
+    implementation("com.facebook.stetho:stetho:1.5.1")
+    implementation("com.facebook.stetho:stetho-okhttp3:1.5.1")
+
     coreLibraryDesugaring (Dep.Tool.desugarJdk)
 }
