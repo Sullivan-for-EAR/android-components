@@ -198,3 +198,21 @@ fun Activity.setupDialogWithAction(
         .setCancelable(false)
         .show()
 }
+
+fun Context.showDialog(title: String, message: String, positiveBtn: String) {
+    val dialog = MaterialAlertDialogBuilder(
+        this, R.style.ThemeOverlay_MaterialComponents_MaterialAlertDialog
+    )
+        .setTitle(title)
+        .setMessage(message)
+        .setPositiveButton(positiveBtn) { dialog, _ ->
+            dialog.dismiss()
+        }
+//        .setNegativeButton(R.string.fragment_reservation_dialog_reservation_cancel_negative_btn_title) { dialog, _ ->
+//            dialog.dismiss()
+//        }
+        .setCancelable(false)
+        .create()
+
+    dialog.show()
+}

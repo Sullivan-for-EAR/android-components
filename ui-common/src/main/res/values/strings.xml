@@ -1,6 +1,6 @@
 <resources>
-    <string name="signear_app_name">signear-android</string>
-    <string name="signear_admin_app_name">signear-admin-android</string>
+    <string name="signear_app_name">이어</string>
+    <string name="signear_admin_app_name">이어 - 수어통역사용</string>
     <string-array name="center_array">
         <item>강남구</item>
         <item>강동구</item>
@@ -39,6 +39,10 @@
         <item>의견 남기기</item>
         <item>로그아웃</item>
     </string-array>
+
+    <string name="future_develop">현재 개발 중입니다.\n곧 이어 드릴게요 :-)</string>
+    <string name="future_develop_positive_btn_title">확인</string>
+    <string name="dialog_title">안내</string>
 
     <!--    Login -->
     <string name="login_title1">쉽고 빠르게</string>
