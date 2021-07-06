@@ -33,11 +33,15 @@
         <item>지난 예약</item>
         <item>의견 남기기</item>
         <item>로그아웃</item>
+        <item>개인정보 처리방침</item>
+        <item>이용약관</item>
     </string-array>
 
     <string-array name="profile_items">
         <item>의견 남기기</item>
         <item>로그아웃</item>
+        <item>개인정보 처리방침</item>
+        <item>이용약관</item>
     </string-array>
 
     <string name="future_develop">현재 개발 중입니다.\n곧 이어 드릴게요 :-)</string>
