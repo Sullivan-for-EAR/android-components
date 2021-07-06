@@ -112,7 +112,7 @@
     <string name="fragment_reservation_tv_place_example">예: 서울대학교병원 가정의학과</string>
     <string name="fragment_reservation_tv_sign_translation_title">수어 통역</string>
     <string name="fragment_reservation_tv_contact_title">대면</string>
-    <string name="fragment_reservation_tv_online_translation_title">온라인 통역</string>
+    <string name="fragment_reservation_tv_online_translation_title">화상 통역</string>
     <string name="fragment_reservation_tv_online_title">비대면</string>
     <string name="fragment_reservation_tv_purpose_guide_msg">수어통역 목적과 요청사항을 입력하세요</string>
     <string name="fragment_reservation_btn_reservation_title">예약하기</string>
@@ -127,8 +127,8 @@
     <string name="fragment_my_page_dialog_logout_positive_btn_title">확인</string>
     <string name="fragment_my_page_dialog_logout_negative_btn_title">취소</string>
 
-<!--    Signear Admin App -->
-<!--    Bottom Navigation-->
+    <!--    Signear Admin App -->
+    <!--    Bottom Navigation-->
     <string name="bottom_nav_title_home">실시간 예약</string>
     <string name="bottom_nav_title_management">예약 관리</string>
     <string name="bottom_nav_title_profile">프로필</string>
