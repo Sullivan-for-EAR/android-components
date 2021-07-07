@@ -8,7 +8,6 @@ import androidx.viewbinding.ViewBinding
 import com.sullivan.common.ui_common.ex.makeGone
 import com.sullivan.common.ui_common.ex.makeVisible
 import com.sullivan.common.ui_common.ex.viewLifecycle
-import com.sullivan.common.ui_common.view.progressbar.ProgressbarListener
 
 abstract class BaseFragment<T : ViewBinding> : Fragment() {
 
