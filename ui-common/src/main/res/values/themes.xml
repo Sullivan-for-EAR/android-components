@@ -19,6 +19,10 @@
         <item name="android:radioButtonStyle">@style/AppleSDGothicNeoRadioButtonStyle</item>
         <item name="android:checkboxStyle">@style/AppleSDGothicNeoCheckboxStyle</item>
         <item name="android:textViewStyle">@style/AppleSDGothicNeoTextViewStyle</item>
+
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="android:windowAnimationStyle">@style/ActivityAnimation</item>
     </style>
 
     <style name="SplashTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
@@ -129,5 +133,12 @@
 <!--        <item name="useCompatPadding">true</item>-->
         <item name="cardUseCompatPadding">true</item>
         <item name="android:clickable">true</item>
+    </style>
+
+    <style name="ActivityAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_out_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_in_left</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_right</item>
     </style>
 </resources>
