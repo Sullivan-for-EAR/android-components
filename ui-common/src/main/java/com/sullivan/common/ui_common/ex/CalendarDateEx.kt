@@ -1,6 +1,5 @@
 package com.sullivan.common.ui_common.ex
 
-import android.widget.TextView
 import timber.log.Timber
 import java.text.ParseException
 import java.text.SimpleDateFormat
@@ -36,31 +35,31 @@ fun String.getTimeInfo(): String {
     val minute = this.substring(2).toInt()
 
     if (hour <= 12) {
-        if (hour <= 9) {
+        return if (hour <= 9) {
             if (minute <= 9) {
-                return "오전 0$hour:0$minute"
+                "오전 0$hour:0$minute"
             } else {
-                return "오전 0$hour:$minute"
+                "오전 0$hour:$minute"
             }
         } else {
             if (minute <= 9) {
-                return "오전 $hour:0$minute"
+                "오전 $hour:0$minute"
             } else {
-                return "오전 $hour:$minute"
+                "오전 $hour:$minute"
             }
         }
     } else {
-        if (hour <= 9) {
+        return if (hour <= 9) {
             if (minute <= 9) {
-                return "오후 0${hour - 12}:0$minute"
+                "오후 0${hour - 12}:0$minute"
             } else {
-                return "오후 0${hour - 12}:$minute"
+                "오후 0${hour - 12}:$minute"
             }
         } else {
             if (minute <= 9) {
-                return "오후 ${hour - 12}:0$minute"
+                "오후 ${hour - 12}:0$minute"
             } else {
-                return "오후 ${hour - 12}:$minute"
+                "오후 ${hour - 12}:$minute"
             }
         }
     }
